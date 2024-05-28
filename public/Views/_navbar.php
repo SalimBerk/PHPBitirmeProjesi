@@ -23,10 +23,17 @@
                         <button><i class="fas fa-search"></i></button>
                     </div>
                 </form>
-                <div class="flex items-center space-x-4 md:space-x-12 text-lg">
-                    <a href="/public/login.php" class="font-bold">Giriş Yap</a>
-                    <a href="/public/signup.php" class=" bg-white font-bold py-1 px-1 hover:bg-stone-500  hover:text-white hover:border-black  border-2 rounded-sm cursor-pointer transition duration-500 whitespace-nowrap">Kayıt Ol</a>
-                </div>
+                <?php if (isset($_COOKIE["auth"])) : ?>
+                    <div class="flex items-center space-x-4 md:space-x-12 text-lg">
+                        <a href="/public/logout.php" class="font-bold">Logout</a>
+                        <a href="#" class=" bg-white font-bold py-1 px-1   whitespace-nowrap">Hoş Geldiniz, <?php echo $_COOKIE["auth"]["username"] ?></a>
+                    </div>
+                <?php else : ?>
+                    <div class="flex items-center space-x-4 md:space-x-12 text-lg">
+                        <a href="/public/login.php" class="font-bold">Giriş Yap</a>
+                        <a href="/public/signup.php" class=" bg-white font-bold py-1 px-1 hover:bg-stone-500  hover:text-white hover:border-black  border-2 rounded-sm cursor-pointer transition duration-500 whitespace-nowrap">Kayıt Ol</a>
+                    </div>
+                <?php endif; ?>
             </div>
 
 
