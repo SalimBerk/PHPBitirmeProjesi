@@ -25,7 +25,7 @@
                 </form>
                 <?php if (isset($_COOKIE["auth"])) : ?>
                     <div class="flex items-center space-x-4 md:space-x-12 text-lg">
-                        <a href="/public/logout.php" class="font-bold">Logout</a>
+                        <a href="/public/logout.php" class="font-bold transition-all ease-in-out hover:text-red-500 ]">Logout</a>
                         <a href="#" class=" bg-white font-bold py-1 px-1   whitespace-nowrap">Hoş Geldiniz, <?php echo $_COOKIE["auth"]["username"] ?></a>
                     </div>
                 <?php else : ?>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include '../public/views/_head.php' ?>
-
+<?php require './libs/functions.php' ?>
 
 
 <body>

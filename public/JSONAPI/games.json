@@ -1,0 +1,90 @@
+[
+  {
+    "gameID": 1,
+    "name": "Ghost of Tsushima",
+    "price": 59.99,
+
+    "description": "Ghost of Tsushima™ - Tsuşima'nın Hayaleti, feodal Japonya devrinde geçen bir açık dünya aksiyon oyunudur. Kahramanımız Jin Sakai, Moğol işgali altındaki Tsuşima adasını kurtarmak adına her şeyini riske atan bir samuraydır. ",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg?t=1716411566",
+    "isactive": 1
+  },
+  {
+    "gameID": 2,
+    "name": "Red Dead Redemption 2",
+    "price": 23.99,
+
+    "description": "Red Dead Redemption 2, Amerika'nın vahşi batısında geçen bir aksiyon-macera oyunudur. Oyuncu, kanun kaçağı Arthur Morgan'ın kontrolünü ele alır ve hayatta kalmak için çeteyle birlikte suç işlemek zorundadır.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1714055653",
+    "isactive": 1
+  },
+  {
+    "gameID": 3,
+    "name": "Cyberpunk 2077",
+    "price": 44.99,
+
+    "description": "Cyberpunk 2077, siberpunk temalı bir açık dünya rol yapma oyunudur. Oyuncu, Night City adlı distopik bir şehirde yaşayan V isimli bir paralı askerin kontrolünü ele alır.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg?t=1715334241",
+    "isactive": 1
+  },
+  {
+    "gameID": 4,
+    "name": "Grand Theft Auto V",
+    "price": 20.4,
+
+    "description": "Grand Theft Auto V, Los Santos adlı kurgusal bir şehirde geçen bir açık dünya aksiyon-macera oyunudur. Oyuncu, üç ana karakterden birini kontrol edebilir: Michael De Santa, Trevor Philips ve Franklin Clinton. Bu üç karakterin yolları bir noktada kesişiyor ve ortak bir amaç için birlikte çalışmaya başlıyorlar.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1645052199",
+    "isactive": 1
+  },
+  {
+    "gameID": 5,
+    "name": "The Witcher 3: Wild Hunt",
+    "price": 29.99,
+    "description": "The Witcher 3: Wild Hunt, Andrzej Sapkowski'nin fantastik roman serisine dayanan bir açık dünya aksiyon rol yapma oyunudur. Oyuncu, Rivia'lı Geralt adında bir canavarca avcısını kontrol eder. Geralt, Ciri adında prensesin peşindedir ve onu bulmak için tehlikeli bir yolculuğa çıkar.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg?t=1716793585",
+    "isactive": 1
+  },
+
+  {
+    "gameID": 6,
+    "name": "Horizon Zero Dawn",
+    "price": 49.99,
+    "description": "Horizon Zero Dawn, robot dinozorlar tarafından istila edilmiş bir post-apokaliptik dünyada geçen bir açık dünya aksiyon rol yapma oyunudur. Oyuncu, Aloy adında bir avcıyı kontrol eder. Aloy, geçmişi ve dünyadaki yerini keşfetmeye çalışırken robot dinozorlarla savaşmak zorundadır.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151640/header.jpg?t=1709156384",
+    "isactive": 1
+  },
+  {
+    "gameID": 7,
+    "name": "Elden Ring",
+    "price": 349.99,
+    "description": "Elden Ring, George R.R. Martin ve Hidetaka Miyazaki tarafından geliştirilen bir açık dünya aksiyon rol yapma oyunudur. Oyuncu, Lands Between adlı fantastik bir dünyayı keşfetmek ve Elden Lord unvanını kazanmak için bir Tarnished'i kontrol eder.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1661867787",
+    "isactive": 1
+  },
+  {
+    "gameID": 8,
+    "name": "God of War",
+    "price": 39.99,
+
+    "description": "God of War (2018), Kratos ve oğlu Atreus'un Norveç mitolojisinde geçen bir aksiyon-macera oyunudur. Kratos, oğlunun hayatta kalmasını ve bir savaşçı olmasını sağlamak için ona rehberlik etmelidir.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1593500/header.jpg?t=1695758729",
+    "isactive": 1
+  },
+  {
+    "gameID": 9,
+    "name": "Sekiro: Shadows Die Twice",
+    "price": 59.99,
+
+    "description": "Sekiro: Shadows Die Twice, FromSoftware tarafından geliştirilen bir aksiyon-macera oyunudur. Oyuncu, Shinobi Wolf adında bir ninjaya dönüşen Wolf adında bir samurayı kontrol eder.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814380/header.jpg?t=1678991267",
+    "isactive": 1
+  },
+  {
+    "gameID": 10,
+    "name": "Detroit: Become Human",
+    "price": 12.79,
+
+    "description": "Detroit: Become Human, Quantic Dream tarafından geliştirilen bir interaktif drama oyunudur. Oyuncu, Connor, Kara ve Markus adında üç androidi kontrol eder ve androidlerin insanlık için bir tehdit olup olmadığına karar vermelidir.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/316410/header.jpg?t=1661867787",
+    "isactive": 1
+  }
+]

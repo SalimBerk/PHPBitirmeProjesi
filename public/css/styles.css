@@ -1345,6 +1345,12 @@ body {
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -1409,6 +1415,11 @@ body {
 .hover\:bg-stone-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(120 113 108 / var(--tw-bg-opacity));
+}
+
+.hover\:text-red-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .hover\:text-white:hover {

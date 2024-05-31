@@ -7,7 +7,6 @@ require "./libs/functions.php";
 
 
 
-
 if (isset($_POST["login"])) {
     $username = $_POST["username"];
     $password = trim($_POST["password"]);
