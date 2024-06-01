@@ -49,10 +49,10 @@ if (isset($_POST["signup"])) {
             <div class="container flex justify-center items-center">
                 <div class="w-[600px] h-[600px] border-4  border-solid border-gray-500 rounded-lg">
                     <div class="user-menu flex items-center">
-                        <a href="/public/signup.php" class="login h-[80px] w-1/2   font-bold text-center text-lg p-5 bg-[#78716c] text-white">
+                        <a href="/PHPBitirmeProjesi/public/signup.php" class="login h-[80px] w-1/2   font-bold text-center text-lg p-5 bg-[#78716c] text-white">
                             Kayıt Ol
                         </a>
-                        <a href="/public/login.php" class="register h-[80px] w-1/2   font-bold text-center text-lg p-5 bg-black text-white">
+                        <a href="/PHPBitirmeProjesi/public/login.php" class="register h-[80px] w-1/2   font-bold text-center text-lg p-5 bg-black text-white">
                             Giriş Yap
                         </a>
                     </div>

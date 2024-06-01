@@ -9,13 +9,13 @@
   <?php include '../public/Views/_navbar.php' ?>
   <!-- Main Header -->
   <?php include '../public/Views/_mainheader.php' ?>
-  <section class="main-section mt-4 mb-3">
-    <div class="container mx-auto py-4 flex space-x-8">
-      <div class="w-1/4 flex-col">
+  <section class="main-section mt-4 mb-3 ">
+    <div class="container min-h-screen my-16 items-center  mx-auto py-4 flex space-x-8">
+      <div class="w-1/2 md:w-1/4 h-full flex-col sm:flex-row">
         <!-- Categories -->
         <?php include '../public/Views/_categories.php' ?>
       </div>
-      <div class="w-9/12 flex flex-row gap-5 flex-wrap justify-center  ">
+      <div class="w-1/2 md:w-9/12  h-full flex flex-row gap-5 flex-wrap justify-center  ">
         <!-- Products -->
         <?php include '../public/Views/_products.php' ?>
 
@@ -28,7 +28,7 @@
 
 
   </section>
-  <section class="main-paralax">
+  <section class="main-paralax ">
     <div class="flex justify-center items-center bg-gameplayer w-full h-72 bg-no-repeat bg-cover bg-right-top bg-fixed">
       <h1 class="font-black text-4xl text-white">Yeni Oyunlar Burada</h1>
     </div>

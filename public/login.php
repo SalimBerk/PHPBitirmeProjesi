@@ -51,10 +51,10 @@ if (isset($_POST["login"])) {
             <div class="container flex justify-center items-center">
                 <div class="w-[600px] h-[600px] border-4  border-solid border-gray-500 rounded-lg">
                     <div class="user-menu flex items-center">
-                        <a href="/public/signup.php" class="login h-[80px] w-1/2     font-bold text-center text-lg p-5 bg-black text-white">
+                        <a href="/PHPBitirmeProjesi/public/signup.php" class="login h-[80px] w-1/2     font-bold text-center text-lg p-5 bg-black text-white">
                             Kayıt Ol
                         </a>
-                        <a href="/public/login.php" class="register h-[80px] w-1/2   font-bold text-center text-lg p-5 bg-[#78716c] text-white">
+                        <a href="/PHPBitirmeProjesi/public/login.php" class="register h-[80px] w-1/2   font-bold text-center text-lg p-5 bg-[#78716c] text-white">
                             Giriş Yap
                         </a>
                     </div>
@@ -62,7 +62,7 @@ if (isset($_POST["login"])) {
                         <div class="space-y-4  ">
                             <div class="mt-10 grid grid-cols-1 p-6 gap-x-6 gap-y-8 sm:grid-cols-6">
                                 <div class="sm:col-span-4">
-                                    <label for="username" class="block text-md font-medium  leading-6 text-gray-900">Kullanıcı Adı / E-Posta</label>
+                                    <label for="username" class="block text-md font-medium  leading-6 text-gray-900">Kullanıcı Adı</label>
                                     <div class="mt-3">
                                         <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:border-blue-400 sm:max-w-md">
                                             <input type="text" name="username" id="username" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900">

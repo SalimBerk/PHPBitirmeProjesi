@@ -1,7 +1,28 @@
-<?php $result = getAllGames();
+<?php
+if (isset($_GET['id'])) {
+    $result = getGamesByCategoryID($_GET['id']);
+    if (mysqli_num_rows($result) < 1) {
+        echo "<div class='container block'>
+        <h2 class='font-bold text-2xl py-4 my-4 text-center'>Tıklanan Kategoriye Ait Herhangi Bir Oyun Bilgisi Bulunamadı.</h2>
+        <br><br>
+       </div> <i class='fa-solid fa-circle-question fa-8x'></i>";
+    }
+} else if (isset($_GET['name'])) {
+    $result = $filteredgames;
+    if (mysqli_num_rows($result) < 1) {
+        echo "<div class='container block'>
+        <h2 class='font-bold text-2xl py-4 my-4 text-center'>Aranan Oyuna Ait Herhangi Bir Bilgi Bulunamadı.</h2>
+        <br><br>
+       </div> <i class='fa-solid fa-circle-question fa-8x'></i>";
+    }
+} else {
+    $result = getAllGames();
+}
+
+
 while ($row = mysqli_fetch_assoc($result)) :
 ?>
-    <div class="card w-80 max-h-[1200px] border-4 rounded-lg border-black">
+    <div class="card w-80 max-h-[600px] border-4 rounded-lg border-black">
         <div class="card-title text-center font-bold text-white  text-lg bg-[#78716c] ">
             <span><?php echo $row['name'] ?></span>
         </div>
@@ -9,7 +30,7 @@ while ($row = mysqli_fetch_assoc($result)) :
             <img src="<?php echo $row['imageurl'] ?>" alt="Product Image" class=" w-full h-[9rem] object-cover rounded-xl">
         </div>
         <div class="flex justify-evenly space-x-1 p-1 my-2  flex-wrap">
-            <button class="bg-blue-500 p-1 rounded-lg text-white text-nowrap">incele <i class="fa-solid fa-eye text-white "></i></button>
+            <a href="/PHPBitirmeProjesi/public/game-detail.php?id=<?php echo $row['gameID'] ?>" class="bg-blue-500 p-1 rounded-lg text-white text-nowrap">incele <i class="fa-solid fa-eye text-white "></i></a>
             <button class="bg-red-500 p-1 rounded-lg text-white text-nowrap">Sepete Ekle <i class="fa-solid fa-basket-shopping text-white"></i></button>
             <button class="bg-green-500 p-1 rounded-lg mt-1  text-white text-nowrap ">Favorilere Ekle<i class="fa-solid fa-heart text-white"></i></button>
         </div>

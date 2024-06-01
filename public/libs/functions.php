@@ -48,7 +48,71 @@ function getAllGames()
     $query = "SELECT*FROM games";
     $result = mysqli_query($connection, $query);
     if (mysqli_num_rows($result) > 0) {
+        mysqli_close($connection);
+        return $result;
+    }
+    mysqli_close($connection);
+    return;
+}
+
+function getGameByID(int $gameID)
+{
+    include "connection.php";
+    $query = "SELECT*FROM games WHERE gameID={$gameID}";
+    $result = mysqli_query($connection, $query);
+    if ($result != null) {
+        mysqli_close($connection);
+        return $result;
+    }
+}
+
+function getAllCategories()
+{
+    include "connection.php";
+    $query = "SELECT*FROM category";
+    $result = mysqli_query($connection, $query);
+    if ($result != null) {
+        mysqli_close($connection);
         return $result;
     }
     return;
+}
+
+function getGamesByCategoryID(int $categoryID)
+{
+    include "connection.php";
+    if ($categoryID != null) {
+        $query = "SELECT*FROM gamescategory gc INNER JOIN games g on gc.games_ID=g.gameID WHERE gc.category_ID={$categoryID}";
+    }
+
+    $result = mysqli_query($connection, $query);
+    if ($result != null) {
+        mysqli_close($connection);
+        return $result;
+    }
+    mysqli_close($connection);
+    return;
+}
+
+function getGamesFilteredBySearch(string $search)
+{
+    include "connection.php";
+    $query = "SELECT*FROM games WHERE name LIKE '%{$search}%' OR description LIKE '%{$search}%'  ";
+    $result = mysqli_query($connection, $query);
+
+    if ($result != null) {
+        mysqli_close($connection);
+        return $result;
+    }
+    mysqli_close($connection);
+    return;
+}
+function getCategoriesByBlogId($id)
+{
+    include "connection.php";
+
+    $query = "SELECT c.categoryID,c.categoryname from gamescategory gc  inner join category c on gc.category_ID=c.categoryID WHERE gc.games_ID=$id";
+    $result = mysqli_query($connection, $query);
+    mysqli_close($connection);
+    return $result;
 }
