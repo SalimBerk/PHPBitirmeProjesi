@@ -10,12 +10,12 @@
   <!-- Main Header -->
   <?php include '../public/Views/_mainheader.php' ?>
   <section class="main-section mt-4 mb-3 ">
-    <div class="container min-h-screen my-16 items-center  mx-auto py-4 flex space-x-8">
-      <div class="w-1/2 md:w-1/4 h-full flex-col sm:flex-row">
+    <div class="container block justify-center md:flex-row min-h-screen my-16 items-center  mx-auto py-4 md:flex space-x-8">
+      <div class="w-full md:w-1/4 md:flex h-full flex-col sm:flex-row">
         <!-- Categories -->
         <?php include '../public/Views/_categories.php' ?>
       </div>
-      <div class="w-1/2 md:w-9/12  h-full flex flex-row gap-5 flex-wrap justify-center  ">
+      <div class="w-1/2 md:w-9/12  items-center h-full flex flex-row gap-5 flex-wrap justify-center  " style="margin: auto; margin-top:2rem;">
         <!-- Products -->
         <?php include '../public/Views/_products.php' ?>
 

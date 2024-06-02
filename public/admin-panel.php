@@ -17,35 +17,8 @@ $getgames = getAllGames();
             <div class=" text-center space-y-8 flex flex-col items-center py-8 admin-menu h-[800px] border-4 border-solid w-1/6 ">
                 <span class="text-3xl font-bold">Admin</span>
                 <img src="./images/profile.jpg" class="admin-profile border-solid border-4 rounded-full bg-cover border-black h-40 w-40" alt="resim bulunamadı" />
-                <div class="admin-menu ">
-                    <ul class="flex flex-col space-y-3">
-
-                        <a href="/">
-                            <li class="border-2 border-solid border-black rounded-md p-2">Oyunlar Listesi</li>
-                        </a>
-                        <a href="/">
-                            <li class="border-2 border-solid border-black rounded-md p-2">Oyun Ekle</li>
-                        </a>
-                        <a href="/">
-                            <li class="border-2 border-solid border-black rounded-md p-2">Oyun Sil</li>
-                        </a>
-                        <a href="/">
-                            <li class="border-2 border-solid border-black rounded-md p-2">Oyun Güncelle</li>
-                        </a>
-                        <a href="/">
-                            <li class="border-2 border-solid border-black rounded-md p-2">Kategoriler Listesi</li>
-                        </a>
-                        <a href="/">
-                            <li class="border-2 border-solid border-black rounded-md p-2">Kategori Ekle</li>
-                        </a>
-                        <a href="/">
-                            <li class="border-2 border-solid border-black rounded-md p-2">Kategori Sil</li>
-                        </a>
-                        <a href="/">
-                            <li class="border-2 border-solid border-black rounded-md p-2">Kategori Güncelle</li>
-                        </a>
-                    </ul>
-                </div>
+                <!-- Admin Menu -->
+                <?php include './Views/_admin-menu.php' ?>
             </div>
 
             <div class="admin-content h-[800px] p-10 border-4 border-solid w-5/6">

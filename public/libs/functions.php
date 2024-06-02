@@ -116,3 +116,28 @@ function getCategoriesByBlogId($id)
     mysqli_close($connection);
     return $result;
 }
+
+function createGame(string $name, float $price, string $description, string $imageurl, int $isactive = 1)
+{
+    include "connection.php";
+
+    $query = "INSERT INTO games(name, price,description,imageurl,isactive) VALUES (?, ?, ?, ?, ?)";
+    $stmt = mysqli_prepare($connection, $query);
+
+    if ($stmt === false) {
+        die('Prepare failed: ' . htmlspecialchars(mysqli_error($connection)));
+    }
+
+    mysqli_stmt_bind_param($stmt, 'sdssi', $name, $price, $description, $imageurl, $isactive);
+
+    $result = mysqli_stmt_execute($stmt);
+
+    if ($result === false) {
+        die('Execute failed: ' . htmlspecialchars(mysqli_stmt_error($stmt)));
+    }
+
+    mysqli_stmt_close($stmt);
+    mysqli_close($connection);
+
+    return $result;
+}

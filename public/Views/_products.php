@@ -22,7 +22,7 @@ if (isset($_GET['id'])) {
 
 while ($row = mysqli_fetch_assoc($result)) :
 ?>
-    <div class="card w-80 max-h-[600px] border-4 rounded-lg border-black">
+    <div class="card  w-80 max-h-[600px] border-4 rounded-lg border-black">
         <div class="card-title text-center font-bold text-white  text-lg bg-[#78716c] ">
             <span><?php echo $row['name'] ?></span>
         </div>
