@@ -65,6 +65,13 @@ function getGameByID(int $gameID)
         return $result;
     }
 }
+function deleteGameByID(int $gameID)
+{
+    include "connection.php";
+    $query = "DELETE FROM games WHERE gameID={$gameID}";
+    $result = mysqli_query($connection, $query);
+    return $result;
+}
 
 function getAllCategories()
 {
@@ -75,9 +82,50 @@ function getAllCategories()
         mysqli_close($connection);
         return $result;
     }
+    return null;
+}
+function createCategory(string $categoryname, int $isactive = 1)
+{
+    include "connection.php";
+    $query = "INSERT INTO category(categoryname,isactive) VALUES('$categoryname',$isactive)";
+    $result = mysqli_query($connection, $query);
+    if ($result != null) {
+        mysqli_close($connection);
+        return $result;
+    }
     return;
 }
+function deleteCategoryByID(int $catID)
+{
+    include "connection.php";
+    $query = "DELETE FROM category WHERE categoryID={$catID}";
+    $result = mysqli_query($connection, $query);
+    return $result;
+}
+function clearGameCategories(int $gameid)
+{
+    include "connection.php";
 
+    $query = "DELETE FROM gamescategory WHERE games_ID=$gameid";
+    $result = mysqli_query($connection, $query);
+    echo mysqli_error($connection);
+
+    return $result;
+}
+function addGameToCategories(int $gameid, array $categories)
+{
+    include "connection.php";
+
+
+    foreach ($categories as $catid) {
+        $query = "INSERT INTO gamescategory(games_ID,category_ID) VALUES ($gameid, $catid);";
+    }
+
+    $result = mysqli_multi_query($connection, $query);
+    echo mysqli_error($connection);
+
+    return $result;
+}
 function getGamesByCategoryID(int $categoryID)
 {
     include "connection.php";
@@ -107,7 +155,7 @@ function getGamesFilteredBySearch(string $search)
     mysqli_close($connection);
     return;
 }
-function getCategoriesByBlogId($id)
+function getCategoriesByGameId($id)
 {
     include "connection.php";
 
@@ -139,5 +187,14 @@ function createGame(string $name, float $price, string $description, string $ima
     mysqli_stmt_close($stmt);
     mysqli_close($connection);
 
+    return $result;
+}
+function updateGameById(int $id, string $name, float $price, string $description, string $imageurl, int $isactive = 1)
+{
+    include "connection.php";
+
+    $query = "UPDATE games SET name='$name',price=$price,description='$description',imageurl='$imageurl',isactive=$isactive WHERE gameID=$id";
+    $result = mysqli_query($connection, $query);
+    mysqli_close($connection);
     return $result;
 }
