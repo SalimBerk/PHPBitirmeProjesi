@@ -1,4 +1,5 @@
 <?php require './libs/functions.php' ?>
+<?php require './libs/vars.php' ?>
 <?php
 
 $getcategories = getAllCategories();
@@ -21,7 +22,7 @@ $getcategories = getAllCategories();
                 <?php include './Views/_admin-menu.php' ?>
             </div>
 
-            <div class="admin-content h-[800px]  p-10 border-4 border-solid w-5/6" style="overflow: scroll; height:800px; overflow-x:hidden;">
+            <div class="admin-content container h-[800px]  p-10 border-4 border-solid w-5/6" style="overflow: scroll; height:800px; overflow-x:hidden;">
                 <table class="table-auto border-collapse border border-slate-400  w-full mx-auto  ">
                     <thead>
                         <tr>

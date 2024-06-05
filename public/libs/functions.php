@@ -95,11 +95,29 @@ function createCategory(string $categoryname, int $isactive = 1)
     }
     return;
 }
+function getCategoryByID(int $catID)
+{
+    include "connection.php";
+    $query = "SELECT*FROM category WHERE categoryID=$catID";
+    $result = mysqli_query($connection, $query);
+    mysqli_close($connection);
+    return $result;
+}
+
 function deleteCategoryByID(int $catID)
 {
     include "connection.php";
     $query = "DELETE FROM category WHERE categoryID={$catID}";
     $result = mysqli_query($connection, $query);
+    mysqli_close($connection);
+    return $result;
+}
+function updateCategory(int $catID, string $categoryname)
+{
+    include "connection.php";
+    $query = "UPDATE category SET categoryname='$categoryname' WHERE categoryID=$catID";
+    $result = mysqli_query($connection, $query);
+    mysqli_close($connection);
     return $result;
 }
 function clearGameCategories(int $gameid)
@@ -194,6 +212,39 @@ function updateGameById(int $id, string $name, float $price, string $description
     include "connection.php";
 
     $query = "UPDATE games SET name='$name',price=$price,description='$description',imageurl='$imageurl',isactive=$isactive WHERE gameID=$id";
+    $result = mysqli_query($connection, $query);
+    mysqli_close($connection);
+    return $result;
+}
+
+function addComment(string $commenttitle, string $commentcontent, int $userid, int $gameID)
+{
+    include "connection.php";
+    $query = "INSERT INTO comments(commenttitle,commentcontent,user_ID,game_ID) VALUES(?,?,?,?)";
+    $stmt = mysqli_prepare($connection, $query);
+    if ($stmt === false) {
+        die('Prepare failed: ' . htmlspecialchars(mysqli_error($connection)));
+    }
+
+    mysqli_stmt_bind_param($stmt, 'ssii', $commenttitle, $commentcontent, $userid, $gameID);
+
+    $result = mysqli_stmt_execute($stmt);
+
+    if ($result === false) {
+        die('Execute failed: ' . htmlspecialchars(mysqli_stmt_error($stmt)));
+    }
+
+    mysqli_stmt_close($stmt);
+    mysqli_close($connection);
+
+    return $result;
+}
+
+function getComments(int $id)
+{
+    include "connection.php";
+
+    $query = "SELECT*FROM comments c INNER JOIN games g on g.gameID=c.game_ID INNER JOIN users u on c.user_ID=u.id WHERE c.game_ID=$id";
     $result = mysqli_query($connection, $query);
     mysqli_close($connection);
     return $result;

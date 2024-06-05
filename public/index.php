@@ -2,6 +2,8 @@
 <html lang="en">
 <?php include '../public/views/_head.php' ?>
 <?php require './libs/functions.php' ?>
+<?php require "libs/vars.php"; ?>
+
 
 
 <body>

@@ -1,4 +1,5 @@
 <?php require './libs/functions.php' ?>
+<?php require './libs/vars.php' ?>
 
 
 <?php

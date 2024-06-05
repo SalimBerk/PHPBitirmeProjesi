@@ -1,4 +1,7 @@
 <?php
+
+
+
 if (isset($_GET['name'])) {
     $nameparam = trim($_GET["name"]);
     $filteredgames = getGamesFilteredBySearch($nameparam);
@@ -33,17 +36,29 @@ if (isset($_GET['name'])) {
                         <button><i class="fas fa-search"></i></button>
                     </div>
                 </form>
-                <?php if (isset($_COOKIE["auth"])) : ?>
+                <?php if (isset($_SESSION["username"]) && $_SESSION["username"] != "admin") : ?>
                     <div class="flex items-center space-x-4 md:space-x-12 text-lg">
-                        <a href="/PHPBitirmeProjesi/public//logout.php" class="font-bold transition-all ease-in-out hover:text-red-500 ]">Logout</a>
-                        <a href="#" class=" bg-white font-bold py-1 px-1   whitespace-nowrap">Hoş Geldiniz, <?php echo $_COOKIE["auth"]["username"] ?></a>
+                        <a href="/PHPBitirmeProjesi/public/logout.php" class="font-bold transition-all ease-in-out hover:text-red-500 ]">Logout</a>
+                        <a href="#" class=" bg-white font-bold py-1 px-1   whitespace-nowrap">Hoş Geldiniz, <?php echo $_SESSION["username"] ?></a>
+                    </div>
+                <?php elseif (isset($_SESSION["username"]) && $_SESSION["username"] == "admin" && $_SESSION["password"] == "admin1234") : ?>
+                    <div class="flex items-center space-x-4 md:space-x-12 text-lg">
+
+                        <a href="/PHPBitirmeProjesi/public/logout.php" class="font-bold transition-all ease-in-out hover:text-red-500 ]">Logout</a>
+                        <a href="#" class=" bg-white font-bold py-1 px-1   whitespace-nowrap">Hoş Geldiniz, <?php echo $_SESSION["username"] ?></a>
+                        <a href="/PHPBitirmeProjesi/public/admin-panel.php" class=" bg-white font-bold py-1 px-1   whitespace-nowrap">Admin Panel</a>
+
                     </div>
                 <?php else : ?>
                     <div class="flex items-center space-x-4 md:space-x-12 text-lg">
+
                         <a href="/PHPBitirmeProjesi/public/login.php" class="font-bold">Giriş Yap</a>
-                        <a href="/PHPBitirmeProjesi/public//signup.php" class=" bg-white font-bold py-1 px-1 hover:bg-stone-500  hover:text-white hover:border-black  border-2 rounded-sm cursor-pointer transition duration-500 whitespace-nowrap">Kayıt Ol</a>
+                        <a href="/PHPBitirmeProjesi/public/signup.php" class=" bg-white font-bold py-1 px-1 hover:bg-stone-500  hover:text-white hover:border-black  border-2 rounded-sm cursor-pointer transition duration-500 whitespace-nowrap">Kayıt Ol</a>
+
                     </div>
                 <?php endif; ?>
+
+
             </div>
 
 
@@ -52,6 +67,7 @@ if (isset($_GET['name'])) {
         <div class="invisible lg:visible nav-animate">
             <span class="first-item font-bold">Sadece Oyun Severlere</span>
             <span class="last-item font-bold"></span>
+
         </div>
         <button><i class="fa fa-bars fa-2x pr-4  visible md:invisible"></i></button>
     </div>

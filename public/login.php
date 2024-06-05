@@ -1,6 +1,7 @@
 <?php
 
 require "./libs/functions.php";
+require "libs/vars.php";
 
 
 
@@ -16,7 +17,10 @@ if (isset($_POST["login"])) {
         while ($result = mysqli_fetch_assoc($logincheck)) {
             if ($username == $result["username"]) {
                 if (password_verify($password, $result["password"])) {
-                    setcookie("auth[username]", $result["username"], time() + (60 * 60));
+                    ini_set('session.gc_maxlifetime', 3600);
+                    $_SESSION["username"] = $username;
+                    $_SESSION["password"] = $password;
+                    $_SESSION["userid"] = $result["id"];
 
                     header("Location:index.php");
                 } else {
@@ -61,6 +65,7 @@ if (isset($_POST["login"])) {
                     <form action="login.php" method="POST">
                         <div class="space-y-4  ">
                             <div class="mt-10 grid grid-cols-1 p-6 gap-x-6 gap-y-8 sm:grid-cols-6">
+
                                 <div class="sm:col-span-4">
                                     <label for="username" class="block text-md font-medium  leading-6 text-gray-900">Kullanıcı Adı</label>
                                     <div class="mt-3">

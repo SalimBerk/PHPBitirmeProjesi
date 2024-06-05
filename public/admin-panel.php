@@ -1,4 +1,5 @@
 <?php require './libs/functions.php' ?>
+<?php require 'libs/vars.php' ?>
 <?php
 
 $getgames = getAllGames();
@@ -21,8 +22,8 @@ $getgames = getAllGames();
                 <?php include './Views/_admin-menu.php' ?>
             </div>
 
-            <div class="admin-content h-[800px] p-10 border-4 border-solid w-5/6">
-                <table class="table-auto border-collapse border border-slate-400  w-full mx-auto ">
+            <div class="admin-content container  h-[800px] p-10 border-4 border-solid w-5/6  " style="overflow:scroll; height:800px; overflow-x:hidden;">
+                <table class="table-auto border-collapse border border-slate-400 w-full   mx-auto  ">
                     <thead>
                         <tr>
                             <th class="border border-slate-500 text-3xl p-1">OYUNLAR</th>
@@ -34,8 +35,8 @@ $getgames = getAllGames();
                     <tbody class="text-center">
                         <?php while ($row = mysqli_fetch_assoc($getgames)) : ?>
                             <tr class="border border-slate-500">
-                                <td class="border p-2 border-slate-500"><?php echo "<span class=' font-bold border-2 border-solid border-black w-9 p-1 rounded-xl bg-purple-600  text-white '>" . $row['name'] . "</span>" ?></td>
-                                <td class="border p-2 space-x-4 border-slate-500"><?php
+                                <td class="border p-1 border-slate-500"><?php echo "<span class=' font-bold border-2 border-solid border-black w-9 p-1 rounded-xl bg-purple-600  text-white '>" . $row['name'] . "</span>" ?></td>
+                                <td class="border p-1 space-x-4 border-slate-500"><?php
                                                                                     $categories = getCategoriesByGameId($row['gameID']);
                                                                                     if (mysqli_num_rows($categories) > 0) {
 
