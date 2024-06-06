@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_GET['id'])) {
     $result = getGamesByCategoryID($_GET['id']);
     if (mysqli_num_rows($result) < 1) {
@@ -16,7 +17,9 @@ if (isset($_GET['id'])) {
        </div> <i class='fa-solid fa-circle-question fa-8x'></i>";
     }
 } else {
-    $result = getAllGames();
+    if (!is_null($clickeditem)) {
+        $result = getGamesByPage($clickeditem);
+    }
 }
 
 
@@ -24,8 +27,9 @@ while ($row = mysqli_fetch_assoc($result)) :
 ?>
     <?php if ($row['isactive']) : ?>
         <div class="card  w-80 max-h-[600px] border-4 rounded-lg border-black">
-            <div class="card-title text-center font-bold text-white  text-lg bg-[#78716c] ">
-                <span><?php echo $row['name'] ?></span>
+            <div class="card-title text-center font-bold text-white  text-lg bg-black ">
+                <span><?php echo substr($row['name'], 0, 25) ?><?php echo strlen($row['name']) > 25 ? '...' : '' ?></span>
+
             </div>
             <div class=" card-image m-4  border-2 border-black rounded-xl">
                 <img src="<?php echo $row['imageurl'] ?>" alt="Product Image" class=" w-full h-[9rem] object-cover rounded-xl">
@@ -38,7 +42,7 @@ while ($row = mysqli_fetch_assoc($result)) :
             <div class="py-5 bg-white ">
                 <div class="container flex justify-between px-2">
                     <div class="flex items-center">
-                        <span class="bg-[#78716c] p-1 rounded-full text-white">Fiyat: <span><?php echo $row['price'] ?>$ </span></span>
+                        <span class="bg-[#808080] p-1 rounded-full text-white">Fiyat: <span><?php echo $row['price'] ?>$ </span></span>
                     </div>
                     <div class="flex items-center relative">
                         <div class="absolute w-4 h-12 bg-yellow-300 right-[30px]"></div>
@@ -48,5 +52,8 @@ while ($row = mysqli_fetch_assoc($result)) :
 
             </div>
         </div>
+
+
+
     <?php endif; ?>
 <?php endwhile; ?>

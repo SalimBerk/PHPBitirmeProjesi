@@ -45,6 +45,7 @@ function createUser(string $username, string $email, string $password)
 function getAllGames()
 {
     include 'connection.php';
+
     $query = "SELECT*FROM games";
     $result = mysqli_query($connection, $query);
     if (mysqli_num_rows($result) > 0) {
@@ -54,6 +55,30 @@ function getAllGames()
     mysqli_close($connection);
     return;
 }
+
+$filteredGamesCount = 0;
+function getGamesByPage(int $pageNumber)
+{
+    include 'connection.php';
+    $currentPage = 1;
+    $recordsPerPage = 10;
+    $offset = ($pageNumber - $currentPage) * $recordsPerPage;
+    $allGames = getAllGames();
+    $filtereddata = ceil(mysqli_num_rows($allGames) / $recordsPerPage);
+    $GLOBALS['filteredGamesCount'] = $filtereddata;
+
+
+    $filteredquery = "SELECT*FROM games LIMIT $recordsPerPage OFFSET $offset";
+    $result = mysqli_query($connection, $filteredquery);
+    if (mysqli_num_rows($result) > 0) {
+        mysqli_close($connection);
+        return $result;
+    }
+    mysqli_close($connection);
+    return mysqli_error($connection);
+}
+
+
 
 function getGameByID(int $gameID)
 {
@@ -245,6 +270,28 @@ function getComments(int $id)
     include "connection.php";
 
     $query = "SELECT*FROM comments c INNER JOIN games g on g.gameID=c.game_ID INNER JOIN users u on c.user_ID=u.id WHERE c.game_ID=$id";
+    $result = mysqli_query($connection, $query);
+    mysqli_close($connection);
+    return $result;
+}
+
+function editImage(string $imagename, int $id)
+{
+    include "connection.php";
+
+
+    $query = "UPDATE users SET imagename='$imagename' WHERE id=$id";
+    $result = mysqli_query($connection, $query);
+    mysqli_close($connection);
+    return $result;
+}
+
+function  getImage(int $id)
+{
+    include "connection.php";
+
+
+    $query = "SELECT imagename FROM users WHERE id=$id";
     $result = mysqli_query($connection, $query);
     mysqli_close($connection);
     return $result;

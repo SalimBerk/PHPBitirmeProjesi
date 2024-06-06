@@ -1,3 +1,14 @@
+<?php
+$clickeditem = 1;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $buttonId = $_POST['button_id'];
+
+
+  $clickeditem = $buttonId;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <?php include '../public/views/_head.php' ?>
@@ -30,32 +41,65 @@
 
 
   </section>
+  <div class="flex flex-row container justify-center">
+    <table style="margin-bottom:15px; ">
+
+      <tr>
+
+        <?php for ($i = 1; $i <= $filteredGamesCount; $i++) : ?>
+
+          <td style="text-align:center; width: 50px; height:50px; background-color:black; color:white;  ">
+            <form action="index.php" method="post">
+              <input type="hidden" name="button_id" id="button_id" value="<?php echo $i; ?>">
+              <button name="<?php echo $i; ?>" type="submit" id="<?php echo $i; ?>"><?php echo $i ?></button>
+            </form>
+
+          </td>
+        <?php endfor; ?>
+
+      </tr>
+
+    </table>
+
+
+
+  </div>
+
+
   <section class="main-paralax ">
-    <div class="flex justify-center items-center bg-gameplayer w-full h-72 bg-no-repeat bg-cover bg-right-top bg-fixed">
-      <h1 class="font-black text-4xl text-white">Yeni Oyunlar Burada</h1>
+    <div class="flex justify-center items-center bg-gameplayer w-full h-80  bg-no-repeat bg-cover bg-right-top bg-fixed">
+      <h1 class="font-black text-4xl text-white">Yeni Oyunlar Burada Hadi İncelemeye Başla</h1>
     </div>
 
   </section>
-  <section class="main-swipper max-h-[700px]">
-    <div class="swiper h-[650px] w-full ">
+  <section class="main-swipper max-h-[700px] flex">
+    <div class="swiper h-[500px]  w-1/2 ">
 
-      <div class="swiper-wrapper text-center flex ">
+      <div class="swiper-wrapper text-center flex   ">
 
-        <div class="swiper-slide"><img src="./images/forza.jpg" class="object-cover w-full h-full"></div>
-        <div class="swiper-slide relative"><img src="./images/uncharted.jpg" class="object-cover object-top w-full h-full"></div>
-        <div class="swiper-slide"><img src="./images/hogwards.jpg" class="object-cover w-full h-full"></div>
+        <div class="swiper-slide"><img src="./images/forza.jpg" class="object-fill w-full h-full"></div>
+        <div class="swiper-slide relative"><img src="./images/uncharted.jpg" class="object-fill w-full  object-top  h-full"></div>
+        <div class="swiper-slide"><img src="./images/hogwards.jpg" class="object-fill  w-full   h-full"></div>
         ...
       </div>
 
       <div class="swiper-pagination"></div>
 
 
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+
 
 
       <div class="swiper-scrollbar"></div>
     </div>
+    <div class=" h-[500px] w-1/2 p-10 space-y-10 bg-black ">
+
+      <h2 class="title text-4xl text-white font-bold">Forza Horizon 5</h2>
+      <article class="desc text-xl text-white">
+        Dünyanın en iyi araçlarında sınırsız, eğlenceli sürücülük aksiyonuyla dolu Meksika'nın capcanlı açık dünya manzaralarını keşfedin. Üst düzey Horizon Ralli deneyiminde engebeli Sierra Nueva yollarını fethedin. Forza Horizon 5 oyunu gerekir, genişletme ayrı satılır.
+      </article>
+
+
+
   </section>
   <!-- Footer -->
   <?php include '../public/Views/_footer.php' ?>
@@ -66,17 +110,49 @@
   const swiper = new Swiper('.swiper', {
 
     direction: 'horizontal',
-    loop: true,
+    loop: false,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+
 
 
     pagination: {
       el: '.swiper-pagination',
+      clickable: false
     },
 
 
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+
+    on: {
+      slideChange: function() {
+        const currentSlideIndex = this.activeIndex;
+
+        switch (currentSlideIndex) {
+          case 0:
+            console.log('case 0')
+            document.querySelector(".title").innerHTML = "Forza Horizon 5";
+            document.querySelector(".desc").innerHTML = "Dünyanın en iyi araçlarında sınırsız, eğlenceli sürücülük aksiyonuyla dolu Meksika'nın capcanlı açık dünya manzaralarını keşfedin. Üst düzey Horizon Ralli deneyiminde engebeli Sierra Nueva yollarını fethedin. Forza Horizon 5 oyunu gerekir, genişletme ayrı satılır.";
+
+            break;
+          case 1:
+            console.log('case 1')
+
+            document.querySelector(".title").innerHTML = "Uncharted The Nathan Drake";
+            document.querySelector(".desc").innerHTML = "Nathan Drake'in dünya çapında alçakgönüllü kökenlerden olağanüstü maceralara uzanan, tehlikeli seyehatini takip ederek tüm zamanların en çok beğenilen oyunlarından birini sen de tecrübe et.".concat("<br><br>Drake akla hayale gelmeyecek hazineleri bulmak için zalim düşmanlara karşı hayatını ve dostlarını ortaya koyarken, sen de unutulmaz karakterlerle tanış.")
+
+            break;
+          case 2:
+            console.log('case 2')
+            document.querySelector(".title").innerHTML = "Hogwarts Legacy";
+            document.querySelector(".desc").innerHTML = "Hogwarts Legacy, insanı içine çeken, açık dünyaya sahip bir RPG oyunudur. Şimdi ipleri elinize alarak büyücülük dünyasında kendi maceranızın tam ortasındaki yerinizi alabilirsiniz.";
+
+            break;
+          default:
+            break;
+        }
+      }
     },
 
 

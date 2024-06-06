@@ -24,6 +24,20 @@
   border-left: 2px solid black;
   animation: animate 4s steps(12) infinite;
 }
+.active {
+  background-color: white;
+  color: black;
+}
+.scroll::-webkit-scrollbar {
+  width: 14px;
+  background-color: gray;
+}
+.scroll::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: black;
+  scrollbar-width: thin;
+  border-radius: 10px;
+}
 
 @keyframes animate {
   40%,

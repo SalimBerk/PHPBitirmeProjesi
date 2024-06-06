@@ -86,5 +86,320 @@
     "description": "Detroit: Become Human, Quantic Dream tarafından geliştirilen bir interaktif drama oyunudur. Oyuncu, Connor, Kara ve Markus adında üç androidi kontrol eder ve androidlerin insanlık için bir tehdit olup olmadığına karar vermelidir.",
     "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/316410/header.jpg?t=1661867787",
     "isactive": 1
+  },
+  {
+    "name": "No Mans Sky",
+    "price": 59.99,
+    "description": "Sonsuz bir evreni keşfetmeye hazır mısın? No Man's Sky'da, her gezegenin, her hayvanın ve her bitkinin benzersiz olduğu uçsuz bucaksız bir dünyada hayatta kalma, kaynak toplama, ticaret yapma ve keşfetme deneyimi yaşayacaksın. Gizemli galaksilerin kapılarını arala!",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/capsule_231x87_alt_assets_23.jpg?t=1716988073",
+    "isactive": 1
+  },
+  {
+    "name": "Factorio",
+    "price": 30.0,
+    "description": "Factorio, bir fabrika inşa etme ve yönetme oyunudur. Ham madde çıkar, onları işleyerek daha gelişmiş ürünler üret, fabrikalarını otomatikleştir ve sürekli genişleyen bir endüstriyel imparatorluk kur. Kaynakları toplamak ve işler hale getirmek için makineler inşa et.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/427520/capsule_231x87.jpg?t=1694021968",
+    "isactive": 1
+  },
+  {
+    "name": "Terraria",
+    "price": 9.99,
+    "description": "Dünyanı inşa et, kaz, savaş ve hayatta kal! Terraria'da rastgele oluşturulmuş bir dünyada zanaatkarlık, inşa ve savaşma becerilerini kullanarak hayatta kalmaya çalış. Kendi dünyanı keşfet, zorluklarla yüzleş ve maceralara atıl.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/capsule_231x87.jpg?t=1666290860",
+    "isactive": 1
+  },
+  {
+    "name": "Hades",
+    "price": 24.99,
+    "description": "Ölüler diyarından kaçmak için amansız bir mücadeleye giriş! Hades, aksiyon dolu roguelike bir zindan keşfetme oyunudur. Yunan mitolojisinden esinlenen dünyada, büyüleyici karakterlerle etkileşim kur, benzersiz güçler topla ve her seferinde biraz daha ileri git.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/capsule_231x87.jpg?t=1715722799",
+    "isactive": 1
+  },
+  {
+    "name": "Celeste",
+    "price": 19.99,
+    "description": "Celeste, Madeline'in Celeste Dağı'nın zirvesine ulaşma mücadelesini konu alan bir platform oyunudur. Zorlu parkurlar, derin bir hikaye ve benzersiz oynanış mekanikleri ile bu oyun, oyunculara unutulmaz bir deneyim sunuyor.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/capsule_231x87.jpg?t=1714089525",
+    "isactive": 1
+  },
+  {
+    "name": "The Forest",
+    "price": 19.99,
+    "description": "Bir uçak kazasından sağ kurtulan bir baba olarak, kayıp çocuğunuzu bulmak için ormanda hayatta kalmalısınız. Bu korku ve hayatta kalma oyununda, tehlikeli yaratıklara karşı mücadele ederken, barınak inşa etmeli ve kaynakları toplamalısınız.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/242760/capsule_231x87.jpg?t=1699381053",
+    "isactive": 1
+  },
+  {
+    "name": "Oxygen Not Included",
+    "price": 24.99,
+    "description": "Kendi uzay kolonini yönettiğin bu simülasyon oyununda, kolonistlerinin hayatta kalmasını sağla. Oksijen üret, kaynakları yönet ve kolonini geliştir. Zorluklarla dolu bu dünyada, koloninin ihtiyaçlarını karşılamak için stratejik kararlar ver.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/457140/capsule_231x87.jpg?t=1701909927",
+    "isactive": 1
+  },
+  {
+    "name": "Football Manager 2024",
+    "price": 59.99,
+    "description": "Takımınızı işe almaktan, eğitmekten ve zafere yönlendirmekten sorumlu bir futbol takımının menajeri olun. Bu sürüm, aracı revizyonu ve daha fazla konumsal kontrol gibi yeni özellikler içerir.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2252570/capsule_231x87.jpg?t=1702984758",
+    "isactive": 1
+  },
+  {
+    "name": "Super Mega Baseball 3",
+    "price": 44.99,
+    "description": "Derin oyun mekaniği ve çok yıllı Franchise modu da dahil olmak üzere çeşitli modlar sunan, çizgi film estetiğine sahip bir beyzbol oyunu. Hem tek oyunculu hem de çok oyunculu deneyimler için uygundur.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/988910/capsule_231x87.jpg?t=1685132432",
+    "isactive": 1
+  },
+  {
+    "name": "EA Sports FC 24",
+    "price": 69.99,
+    "description": "Eskiden FIFA olarak bilinen bu futbol oyunu, tek oyunculu menajer kariyeri ve popüler Ultimate Team modu gibi modlarla gerçekçi bir maç günü deneyimi sunuyor.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2195250/capsule_231x87.jpg?t=1713799333",
+    "isactive": 1
+  },
+  {
+    "name": "eFootball™ 2024",
+    "price": 0,
+    "description": "En güncel verilerle heyecan dolu futbol klasiği! eFootball™ 2024'te gerçek futbolcoşkusunu yaşayın!",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1665460/capsule_231x87.jpg?t=1713163424",
+    "isactive": 1
+  },
+  {
+    "name": "Dusk",
+    "price": 19.99,
+    "description": "Dusk, Doom ve Quake gibi klasik nişancı oyunlarından ipuçları alan, retro esintili bir FPS'dir. Sonsuz özelleştirme seçenekleri, benzersiz seviyeler ve ortaya çıkarılacak sırlarla dolu Dusk, 90'ların FPS dönemine saygı duruşunda bulunurken taze ve yenilikçi bir deneyim sunuyor.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/519860/capsule_231x87.jpg?t=1702316720",
+    "isactive": 1
+  },
+  {
+    "name": "Overwatch 2",
+    "price": 0,
+    "description": "Overwatch 2, oyuncuların her biri kendi yeteneklerine sahip benzersiz kahramanlardan oluşan bir listeden seçim yaptığı, takım tabanlı bir kahraman nişancı oyunudur. Oyun, stratejik takım oyununa odaklanır ve hem hücum hem de savunma hedefleri dahil olmak üzere çeşitli oyun modlarına sahiptir.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/capsule_231x87.jpg?t=1715731747",
+    "isactive": 1
+  },
+  {
+    "name": "PUBG: Battlegrounds",
+    "price": 0,
+    "description": "PUBG: Battlegrounds, oyuncuların büyük bir haritaya paraşütle atladığı, silah topladığı ve ayakta kalan son kişi olmak için savaştığı battle royale türünü popüler hale getirdi. Hem birinci şahıs hem de üçüncü şahıs bakış açıları sunar.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/capsule_231x87.jpg?t=1713943796",
+    "isactive": 1
+  },
+  {
+    "name": "Borderlands 2",
+    "price": 19.99,
+    "description": "Borderlands 2, benzersiz ve çılgın silahlardan oluşan geniş bir cephaneliğe sahip, FPS oynanışını RPG unsurlarıyla birleştiriyor. Oyun renkli, abartılı bir bilim kurgu dünyasında geçiyor ve esprili tonu ve işbirlikçi çok oyunculu moduyla tanınıyor.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/49520/capsule_231x87.jpg?t=1693524237",
+    "isactive": 1
+  },
+  {
+    "name": "Titanfall 2",
+    "price": 29.99,
+    "description": "Titanfall 2 offers a unique blend of fast-paced FPS action and mech-based combat. The game features a highly acclaimed single-player campaign and a variety of multiplayer modes that emphasize mobility and strategy.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237970/capsule_231x87.jpg?t=1668565264",
+    "isactive": 1
+  },
+  {
+    "name": "Armored Core 6: Fires of Rubicon",
+    "price": 59.99,
+    "description": "FromSoftware's latest entry in the Armored Core series features intense mech combat, with deep customization options for your mechs. The game is structured into five chapters, each filled with missions that drive the narrative forward.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888160/capsule_231x87.jpg?t=1709304761",
+    "isactive": 1
+  },
+  {
+    "name": "Hi-Fi Rush",
+    "price": 29.99,
+    "description": "Oyuncuların, müziğin ritmine göre savaşan asi Chai'yi kontrol ettiği, aksiyon dolu bir müzikal macera. Ritim ve aksiyon oyununun bu benzersiz karışımı son derece ilgi çekici bir deneyim sunuyor.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817230/capsule_231x87_turkish.jpg?t=1715602824",
+    "isactive": 1
+  },
+  {
+    "name": "Devil May Cry 5",
+    "price": 29.99,
+    "description": "Devil May Cry serisinin son oyunu, hayranların en sevdiği karakterler Dante ve Nero'nun yanı sıra yeni gelen V'yi de geri getiriyor. Şık dövüşü, olağanüstü aksiyonu ve ilgi çekici hikayesiyle biliniyor.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601150/capsule_231x87.jpg?t=1701395090",
+    "isactive": 1
+  },
+  {
+    "name": "A Hat in Time",
+    "price": 29.99,
+    "description": "A Hat in Time, kötü güçler için şapka diken küçük bir kızın yer aldığı son derece sevimli bir 3D platform oyunudur. Klasik platform oyunlarının bu büyüleyici geri dönüşünde çeşitli tuhaf dünyalarda seyahat edin, bulmacaları çözün ve ilginç düşmanları alt edin.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/253230/capsule_231x87.jpg?t=1688042605",
+    "isactive": 1
+  },
+  {
+    "name": "Crash Bandicoot N. Sane Trilogy",
+    "price": 39.99,
+    "description": "Crash Bandicoot'un klasik maceralarını tamamen yeniden düzenlenmiş HD ihtişamıyla yeniden yaşayın. Gelişmiş grafiklere ve oynanışa sahip, her şeyi başlatan orijinal üç oyunda dönün, zıplayın ve zıplayın. Hem nostaljik hayranlar hem de yeni oyuncular için mükemmel.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/731490/capsule_231x87.jpg?t=1568841571",
+    "isactive": 1
+  },
+  {
+    "name": "Ori and the Will of the Wisps",
+    "price": 29.99,
+    "description": "Ori'nin gerçek kaderini ortaya çıkarma arayışınızda çok sayıda düşmanla ve zorlu bulmacalarla karşılaşacağınız geniş ve egzotik bir dünyada yepyeni bir maceraya atılın. Görsel açıdan büyüleyici bu platform oyunu, kaliteli bir dövüş ve zengin, duygusal bir hikaye sunuyor.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1057090/capsule_231x87.jpg?t=1701967625",
+    "isactive": 1
+  },
+  {
+    "name": "Spyro Reignited Trilogy",
+    "price": 39.99,
+    "description": "Orijinal kızartma ustası geri döndü! Aynı hastalıklı yanıklar, aynı için için yanan tutum, şimdi hepsi büyüleyici HD kalitesinde büyütüldü. Spyro Reignited Trilogy'de tamamı tamamen yeniden düzenlenen Spyro the Dragon, Spyro 2: Ripto's Rage! ve Spyro: Year of the Dragon yer alıyor.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/996580/capsule_231x87.jpg?t=1715804778",
+    "isactive": 1
+  },
+  {
+    "name": "Sherlock Holmes: Crimes and Punishments",
+    "price": 19.99,
+    "description": "Efsanevi dedektif Sherlock Holmes olarak oynayın ve korkunç cinayetlerden kafa karıştırıcı hırsızlıklara kadar altı heyecan verici vakayı çözün.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/241260/capsule_231x87.jpg?t=1693291960",
+    "isactive": 1
+  },
+  {
+    "name": "Grim Fandango Remastered",
+    "price": 14.99,
+    "description": "Bir komployu ortaya çıkarmak için dedektif olan seyahat acentesi Manny Calavera ile Ölüler Ülkesini keşfedin.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/316790/capsule_231x87.jpg?t=1677883403",
+    "isactive": 1
+  },
+  {
+    "name": "L.A. Noire",
+    "price": 19.99,
+    "description": "Suç mahallerini araştırırken ve şüphelileri sorgularken 1940'ların Los Angeles'ında Cole Phelps'in yerine geçin.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/110800/capsule_231x87.jpg?t=1706132916",
+    "isactive": 1
+  },
+  {
+    "name": "Disco Elysium",
+    "price": 18.99,
+    "description": "Bu anlatı odaklı RPG, benzersiz ve sürükleyici bir dünyada bir cinayet gizemini çözmenize olanak tanır.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/capsule_231x87_alt_assets_12.jpg?t=1715250992",
+    "isactive": 1
+  },
+  {
+    "name": "Sherlock Holmes: Chapter One",
+    "price": 17.85,
+    "description": "Genç Sherlock Holmes, bir Akdeniz adasındaki ilk vakalarını araştırıyor ve oyuncu odaklı seçimler sunuyor.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1137300/capsule_231x87.jpg?t=1716313326",
+    "isactive": 1
+  },
+  {
+    "name": "Alan Wake",
+    "price": 14.99,
+    "description": "Yazar Alan Wake'in doğaüstü güçlerin kol gezdiği bir kasabada kayıp karısını aradığı psikolojik gerilim.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108710/capsule_231x87.jpg?t=1667485381",
+    "isactive": 1
+  },
+  {
+    "name": "The Mortuary Assistant",
+    "price": 12.49,
+    "description": "Cesetlerin arasında ele geçirilmiş bir cesedi tanımlamanız gereken perili bir morgda çalışın.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1295920/capsule_231x87.jpg?t=1716932710",
+    "isactive": 1
+  },
+  {
+    "name": "Return of the Obra Dinn",
+    "price": 10.49,
+    "description": "Bir sigorta müfettişi olarak hayalet gemi Obra Dinn'in mürettebatına ne olduğunun gizemini çözmelisiniz.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/653530/capsule_231x87.jpg?t=1686697594",
+    "isactive": 1
+  },
+  {
+    "name": "The Wolf Among Us",
+    "price": 7.99,
+    "description": "Fabletown'daki bir dizi cinayeti araştırırken, dedektife dönüşen bir peri masalı karakteri olan Bigby Wolf olarak oynayın.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/250320/capsule_231x87.jpg?t=1686747108",
+    "isactive": 1
+  },
+  {
+    "name": "Starfield",
+    "price": 41.99,
+    "description": "Bethesda'nın uzay keşif RPG'si, karakterinizi yaratmanıza ve yıldızlar arasında destansı bir yolculuğa çıkmanıza olanak tanır. Yeni gezegenleri, grupları ve hikayeleri keşfedin.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1716740/capsule_231x87.jpg?t=1704299959",
+    "isactive": 1
+  },
+  {
+    "name": "Disco Elysium",
+    "price": 18.99,
+    "description": "Bu anlatı odaklı RPG, sizi bir cinayet gizemini çözen bir dedektifin yerine koyuyor. Derin hikayesi, zengin diyalogları ve benzersiz beceri sistemiyle tanınır.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/capsule_231x87_alt_assets_12.jpg?t=1715250992",
+    "isactive": 1
+  },
+  {
+    "name": "Like A Dragon: Infinite Wealth",
+    "price": 69.99,
+    "description": "Yakuza serisinin en son oyunu olan bu sıra tabanlı RPG, sizi yoğun savaşlar, komik yan görevler ve ilgi çekici hikayelerle Honolulu'ya götürüyor.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2072450/capsule_231x87.jpg?t=1709543079",
+    "isactive": 1
+  },
+  {
+    "name": "Dragon's Dogma: Dark Arisen",
+    "price": 22.49,
+    "description": "Dinamik bir savaş sistemine sahip bir aksiyon RPG'si. Karanlık bir fantastik dünyayı keşfedin, karakterinizi ve piyonlarınızı kişiselleştirin ve zorlu düşmanlarla mücadele edin.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367500/capsule_231x87.jpg?t=1701395331",
+    "isactive": 1
+  },
+  {
+    "name": "Baldur's Gate 3",
+    "price": 34.99,
+    "description": "Seçimlerinizin hikayeyi şekillendirdiği bu Dungeons & Dragons'dan ilham alan RPG'de destansı bir yolculuğa çıkın. Sıra tabanlı dövüşlere katılın, etkili kararlar alın ve benzersiz karakterler ve görevlerle dolu geniş bir dünyayı keşfedin.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/capsule_231x87.jpg?t=1713271288",
+    "isactive": 1
+  },
+  {
+    "name": "Persona 3 Reload",
+    "price": 69.99,
+    "description": "Zindanda gezinmeyi ve sıra tabanlı dövüşü lise sosyal simülasyonuyla birleştiren klasik JRPG'nin yeniden yapımı. Karmaşık karakterlerle olgun bir hikayeyi deneyimleyin.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2161700/capsule_231x87.jpg?t=1717502024",
+    "isactive": 1
+  },
+  {
+    "name": "Counter-Strike",
+    "price": 5.79,
+    "description": "Counter-Strike: Global Offensive (CS:GO), Valve ve Hidden Path Entertainment tarafından geliştirilen çok oyunculu bir birinci şahıs nişancı oyunudur. Counter-Strike serisinin dördüncü oyunudur.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10/capsule_231x87.jpg?t=1666823513",
+    "isactive": 1
+  },
+  {
+    "name": "Rainbow Six Siege",
+    "price": 15.99,
+    "description": "Tom Clancy's Rainbow Six Siege, Ubisoft Montreal tarafından geliştirilen ve Ubisoft tarafından yayınlanan çevrimiçi bir taktiksel nişancı video oyunudur. Microsoft Windows, PlayStation 4 ve Xbox One için dünya çapında piyasaya sürüldü.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/capsule_231x87.jpg?t=1716985808",
+    "isactive": 1
+  },
+  {
+    "name": "Among Us",
+    "price": 2.49,
+    "description": "Among Us, Amerikan oyun stüdyosu InnerSloth tarafından geliştirilen ve yayınlanan çevrimiçi çok oyunculu bir sosyal çıkarım oyunudur.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/capsule_231x87.jpg?t=1698177355",
+    "isactive": 1
+  },
+  {
+    "name": "Rocket League",
+    "price": 6.72,
+    "description": "Rocket League, Psyonix tarafından geliştirilen ve yayınlanan bir araç futbolu video oyunudur. Oyun ilk olarak Temmuz 2015'te Microsoft Windows ve PlayStation 4 için piyasaya sürüldü.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/bundles/12420/x1myriwmqd4dbteh/capsule_231x87.jpg?t=1572863817",
+    "isactive": 1
+  },
+  {
+    "name": "Call of Duty: Warzone",
+    "price": 0,
+    "description": "Call of Duty: Warzone, 10 Mart 2020'de Xbox One, PlayStation 4 ve Microsoft Windows için piyasaya sürülen, oynaması ücretsiz bir battle royale video oyunudur. Oyun, 2019 tarihli Call of Duty: Modern Warfare oyununun bir parçasıdır.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962663/capsule_231x87.jpg?t=1716999333",
+    "isactive": 1
+  },
+  {
+    "name": "Dota 2",
+    "price": 0,
+    "description": "Dota 2, Valve tarafından geliştirilen ve yayınlanan çok oyunculu bir çevrimiçi savaş arenası (MOBA) video oyunudur. Oyun, Blizzard Entertainment'ın Warcraft III: Reign of Chaos ve genişletme paketi The Frozen Throne için topluluk tarafından oluşturulan bir mod olan Defense of the Ancients'ın (DotA) devamı niteliğindedir.",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/capsule_231x87.jpg?t=1714502360",
+    "isactive": 1
+  },
+  {
+    "name": "Minecraft Dungeons",
+    "price": 11.99,
+    "description": "Klasik zindan yaratıklarından esinlenerek Minecraft evreninde gerçekleşen yepyeni aksiyon-macera oyununda dövüşerek ilerleyin! Zindanlara tek başınıza veya arkadaşlarınızla birlikte girin!",
+    "imageurl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1672970/capsule_231x87.jpg?t=1717003107",
+    "isactive": 1
   }
 ]

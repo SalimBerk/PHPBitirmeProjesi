@@ -1,5 +1,12 @@
 <?php
 
+if (!empty($_SESSION['userid'])) {
+    $getprofile = getImage($_SESSION["userid"]);
+    $get = mysqli_fetch_assoc($getprofile);
+}
+
+
+
 
 
 if (isset($_GET['name'])) {
@@ -28,6 +35,8 @@ if (isset($_GET['name'])) {
                 <a href="#" class="text-black whitespace-nowrap">Yeni Oyunlar</a>
                 <a href="#" class="text-black whitespace-nowrap">Hakkımızda</a>
 
+
+
             </div>
             <div class="flex items-center space-x-4 lg:space-x-8 whitespace-nowrap">
                 <form action="/PHPBitirmeProjesi/public/index.php" method="GET">
@@ -39,13 +48,15 @@ if (isset($_GET['name'])) {
                 <?php if (isset($_SESSION["username"]) && $_SESSION["username"] != "admin") : ?>
                     <div class="flex items-center space-x-4 md:space-x-12 text-lg">
                         <a href="/PHPBitirmeProjesi/public/logout.php" class="font-bold transition-all ease-in-out hover:text-red-500 ]">Logout</a>
-                        <a href="#" class=" bg-white font-bold py-1 px-1   whitespace-nowrap">Hoş Geldiniz, <?php echo $_SESSION["username"] ?></a>
+                        <a href="/PHPBitirmeProjesi/public/profile-edit.php" class=" bg-white font-bold py-1 px-1 flex gap-4 items-center  whitespace-nowrap">Hoş Geldiniz, <?php echo $_SESSION["username"] ?><img src="/PHPBitirmeProjesi/public/images/<?php echo $get['imagename'] ?>" alt="Resim Bulunamadı." style="height: 50px; " class="rounded-full  border-4  border-black border-solid "></a>
+
+
                     </div>
                 <?php elseif (isset($_SESSION["username"]) && $_SESSION["username"] == "admin" && $_SESSION["password"] == "admin1234") : ?>
                     <div class="flex items-center space-x-4 md:space-x-12 text-lg">
 
                         <a href="/PHPBitirmeProjesi/public/logout.php" class="font-bold transition-all ease-in-out hover:text-red-500 ]">Logout</a>
-                        <a href="#" class=" bg-white font-bold py-1 px-1   whitespace-nowrap">Hoş Geldiniz, <?php echo $_SESSION["username"] ?></a>
+                        <a href="/PHPBitirmeProjesi/public/profile-edit.php" class=" bg-white font-bold py-1 px-1 flex gap-4 items-center   whitespace-nowrap">Hoş Geldiniz, <?php echo $_SESSION["username"] ?><img src="/PHPBitirmeProjesi/public/images/<?php echo $get['imagename'] ?>" alt="Resim Bulunamadı." style="height: 50px; " class="rounded-full  border-4  border-black border-solid "></a>
                         <a href="/PHPBitirmeProjesi/public/admin-panel.php" class=" bg-white font-bold py-1 px-1   whitespace-nowrap">Admin Panel</a>
 
                     </div>

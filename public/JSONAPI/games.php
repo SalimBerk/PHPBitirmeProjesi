@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 // $server = "127.0.0.1:3307";
 // $adminisrator = "root";
 // $adminisratorpassword = "";
@@ -13,10 +16,14 @@
 
 
 // $array = json_decode($filename, true);
+// echo "<pre>";
+// print_r($array);
+// echo "</pre>";
 
 // foreach ($array as $value) {
-//   $desc = str_replace("'", " ", $value['description']);
-//   $query = "INSERT INTO games (name,price,description,imageurl) VALUES('{$value['name']}','{$value['price']}','{$desc}','{$value['imageurl']}')";
-//   mysqli_query($connection, $query);
+//     $desc = str_replace("'", " ", $value['description']);
+//     $name = str_replace("'", " ", $value['name']);
+//     $query = "INSERT INTO games (name,price,description,imageurl) VALUES('{$name}','{$value['price']}','{$desc}','{$value['imageurl']}')";
+//     mysqli_query($connection, $query);
 // }
 // mysqli_close($connection);
