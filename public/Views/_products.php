@@ -23,6 +23,7 @@ if (isset($_GET['id'])) {
 }
 
 
+
 while ($row = mysqli_fetch_assoc($result)) :
 ?>
     <?php if ($row['isactive']) : ?>
@@ -36,8 +37,12 @@ while ($row = mysqli_fetch_assoc($result)) :
             </div>
             <div class="flex justify-evenly space-x-1 p-1 my-2  flex-wrap">
                 <a href="/PHPBitirmeProjesi/public/game-detail.php?id=<?php echo $row['gameID'] ?>" class="bg-blue-500 p-1 rounded-lg text-white text-nowrap">incele <i class="fa-solid fa-eye text-white "></i></a>
-                <button class="bg-red-500 p-1 rounded-lg text-white text-nowrap">Sepete Ekle <i class="fa-solid fa-basket-shopping text-white"></i></button>
-                <button class="bg-green-500 p-1 rounded-lg mt-1  text-white text-nowrap ">Favorilere Ekle<i class="fa-solid fa-heart text-white"></i></button>
+
+                <form action="index.php" method="post">
+                    <input type="hidden" name="game_ID" id="game_ID" value="<?php echo $row['gameID'] ?>">
+                    <button type="submit" class="bg-green-500 p-1 rounded-lg mt-1  text-white text-nowrap ">Favorilere Ekle<i class="fa-solid fa-heart text-white"></i></button>
+                </form>
+
             </div>
             <div class="py-5 bg-white ">
                 <div class="container flex justify-between px-2">
