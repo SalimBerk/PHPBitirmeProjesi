@@ -1,40 +1,19 @@
-<?php require './libs/functions.php' ?>
-<?php require "libs/vars.php"; ?>
 <?php
 $clickeditem = 1;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button_id'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $buttonId = $_POST['button_id'];
-
 
 
   $clickeditem = $buttonId;
 }
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['game_ID'])) {
-  $gameid = $_POST['game_ID'];
-
-  if ($gameid && isset($_SESSION["userid"])) {
-
-
-
-
-    $addlike = addlike($_SESSION['userid'], $gameid);
-  } else {
-    echo "<div class='bg-black border-t border-b text-center text-white font-bold  border-blue-500 px-4 py-3' role='alert'>
-            
-      <p class='text-2xl'>Giriş Yapılmadan Ekleme Yapılamaz !</p>
-    </div>";
-  }
-}
-
-
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <?php include '../public/views/_head.php' ?>
-
+<?php require './libs/functions.php' ?>
+<?php require "libs/vars.php"; ?>
 
 
 
@@ -89,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['game_ID'])) {
 
   <section class="main-paralax ">
     <div class="flex justify-center items-center bg-gameplayer w-full h-80  bg-no-repeat bg-cover bg-right-top bg-fixed">
-      <h1 class="font-black text-4xl text-white">Oyunlar Hakkında Düşüncelerini Açıkça Paylaş !</h1>
+      <h1 class="font-black text-4xl text-white">Yeni Oyunlar Burada Hadi İncelemeye Başla</h1>
     </div>
 
   </section>
