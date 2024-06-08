@@ -82,6 +82,7 @@ if (isset($_POST["login"])) {
                                 </div>
                                 <div class="sm:col-span-4">
                                     <label for="password" class="block text-md font-medium  leading-6 text-gray-900">Şifre</label>
+
                                     <div class="mt-3">
                                         <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:border-blue-400 sm:max-w-md">
                                             <input type="password" maxlength="14" name="password" id="password" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900">

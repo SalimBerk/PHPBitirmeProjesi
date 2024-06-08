@@ -29,7 +29,7 @@ if (isset($_GET['name'])) {
                 <div class="w-8 h-1 rounded-full"></div>
             </div>
         </div>
-        <nav class="hidden md:flex justify-between flex-1">
+        <nav class="hidden md:flex justify-between flex-1 ">
             <div class="flex items-center lg:text-lg font-bold space-x-4 lg:space-x-8">
                 <a href="#" class="text-black whitespace-nowrap">Anasayfa</a>
                 <a href="#" class="text-black whitespace-nowrap">Yeni Oyunlar</a>
@@ -47,6 +47,9 @@ if (isset($_GET['name'])) {
                 </form>
                 <?php if (isset($_SESSION["username"]) && $_SESSION["username"] != "admin") : ?>
                     <div class="flex items-center space-x-4 md:space-x-12 text-lg">
+                        <a href="/PHPBitirmeProjesi/public/favs.php" class="font-bold transition-all ease-in-out hover:text-red-500 ] "><i class="fa-solid fa-heart "> favs </i></a><span style="width: 30px; height:30px;" class="bg-red-400 rounded-full text-center text-white"><?php $total = getLikeTotalByUserId($_SESSION['userid']);
+                                                                                                                                                                                                                                                                                    $total = mysqli_fetch_assoc($total);
+                                                                                                                                                                                                                                                                                    echo $total['total_likes'];  ?></span>
                         <a href="/PHPBitirmeProjesi/public/logout.php" class="font-bold transition-all ease-in-out hover:text-red-500 ]">Logout</a>
                         <a href="/PHPBitirmeProjesi/public/profile-edit.php" class=" bg-white font-bold py-1 px-1 flex gap-4 items-center  whitespace-nowrap">Hoş Geldiniz, <?php echo $_SESSION["username"] ?><img src="/PHPBitirmeProjesi/public/images/<?php echo $get['imagename'] ?>" alt="Resim Bulunamadı." style="height: 50px; " class="rounded-full  border-4  border-black border-solid "></a>
 
@@ -54,7 +57,9 @@ if (isset($_GET['name'])) {
                     </div>
                 <?php elseif (isset($_SESSION["username"]) && $_SESSION["username"] == "admin" && $_SESSION["password"] == "admin1234") : ?>
                     <div class="flex items-center space-x-4 md:space-x-12 text-lg">
-
+                        <a href="/PHPBitirmeProjesi/public/favs.php" class="font-bold transition-all ease-in-out hover:text-red-500 ]"><i class="fa-solid fa-heart "> favs </i></a><span style="width: 30px; height:30px;" class="bg-red-400 rounded-full text-center text-white"><?php $total = getLikeTotalByUserId($_SESSION['userid']);
+                                                                                                                                                                                                                                                                                    $total = mysqli_fetch_assoc($total);
+                                                                                                                                                                                                                                                                                    echo $total['total_likes'];  ?></span>
                         <a href="/PHPBitirmeProjesi/public/logout.php" class="font-bold transition-all ease-in-out hover:text-red-500 ]">Logout</a>
                         <a href="/PHPBitirmeProjesi/public/profile-edit.php" class=" bg-white font-bold py-1 px-1 flex gap-4 items-center   whitespace-nowrap">Hoş Geldiniz, <?php echo $_SESSION["username"] ?><img src="/PHPBitirmeProjesi/public/images/<?php echo $get['imagename'] ?>" alt="Resim Bulunamadı." style="height: 50px; " class="rounded-full  border-4  border-black border-solid "></a>
                         <a href="/PHPBitirmeProjesi/public/admin-panel.php" class=" bg-white font-bold py-1 px-1   whitespace-nowrap">Admin Panel</a>
