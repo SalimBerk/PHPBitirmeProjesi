@@ -25,6 +25,7 @@ Uygulamada Kullanıcılar:
 <li>Profil resimlerini değiştirebilirler.</li>
 </ul>
 
+![image](https://github.com/SalimBerk/PHPBitirmeProjesi/assets/77536512/334ca657-b70d-4f1a-9a0c-806a1bd8acfc)
 
 
 
