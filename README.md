@@ -25,7 +25,12 @@ Uygulamada Kullanıcılar:
 <li>Profil resimlerini değiştirebilirler.</li>
 </ul>
 
+<div style="display:flex; gap:2rem;">
 <img src="https://github.com/SalimBerk/PHPBitirmeProjesi/assets/77536512/334ca657-b70d-4f1a-9a0c-806a1bd8acfc" style="height:500px; width:500px;">
+<img src="https://github.com/SalimBerk/PHPBitirmeProjesi/assets/77536512/334ca657-b70d-4f1a-9a0c-806a1bd8acfc" style="height:500px; width:500px;">
+  
+</div>
+
 
 
 
