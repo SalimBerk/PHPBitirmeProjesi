@@ -4,14 +4,6 @@ require "./libs/functions.php";
 require "libs/vars.php";
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> parent of 460c1d3 (404 sayfası ve favoriler sayfası eklendi.)
-
 
 
 
