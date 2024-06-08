@@ -18,9 +18,15 @@ Swiper kütüphanesinden yararlanılmıştır.
 <br>
 
 Uygulamada Kullanıcılar:
-•	Kayıt olup giriş yapabilmektedirler.
-•	Giriş yapan kullanıcılar yönetici ve kullanıcılar olarak ikiye ayrılırlar.
-•	Profil resimlerini değiştirebilirler.
+
+<ul>
+<li>Kayıt olup giriş yapabilmektedirler.</li>
+<li>Giriş yapan kullanıcılar yönetici ve kullanıcılar olarak ikiye ayrılırlar.</li>
+<li>Profil resimlerini değiştirebilirler.</li>
+</ul>
+
+
+
 
 
 
