@@ -6,6 +6,7 @@ $result = getLikesListById($_SESSION['userid']);
 
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -34,9 +35,10 @@ $result = getLikesListById($_SESSION['userid']);
                     <div class="flex justify-evenly space-x-1 p-3 mx-auto my-2  flex-wrap">
                         <a href="/PHPBitirmeProjesi/public/game-detail.php?id=<?php echo $row['gameID'] ?>" class="bg-blue-500 p-1 rounded-lg text-white text-nowrap">incele <i class="fa-solid fa-eye text-white "></i></a>
 
-                        <form action="index.php" method="post">
+                        <form action="delete_fav.php" class="flex justify-center flex-col" method="post">
                             <input type="hidden" name="game_ID" id="game_ID" value="<?php echo $row['gameID'] ?>">
-                            <button type="submit" class=" bg-red-500 p-1 rounded-lg mt-3  text-white text-nowrap "><?php echo $row['likedate'] ?> oyun favorilere eklendi.</button>
+                            <span class=" bg-green-500 p-1 rounded-lg mt-3  text-white text-nowrap "><?php echo $row['likedate'] ?> oyun favorilere eklendi.</span>
+                            <button type='submit' class="bg-red-500 p-1 rounded-lg mt-3 text-center    text-white text-nowrap">Favorilerden Çıkar <i class="fa fa-sign-out ml-4" aria-hidden="true"></i></button>
                         </form>
 
                     </div>

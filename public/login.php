@@ -4,15 +4,6 @@ require "./libs/functions.php";
 require "libs/vars.php";
 
 
-$clientID = "426570786605-bgbb6m8nvcsrav548tebcu0ecg4a55fa.apps.googleusercontent.com";
-$secret = "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";
-
-
-
-
-
-
-
 
 if (isset($_POST["login"])) {
     $username = $_POST["username"];

@@ -162,9 +162,10 @@ function addGameToCategories(int $gameid, array $categories)
 
     foreach ($categories as $catid) {
         $query = "INSERT INTO gamescategory(games_ID,category_ID) VALUES ($gameid, $catid);";
+        $result = mysqli_multi_query($connection, $query);
     }
 
-    $result = mysqli_multi_query($connection, $query);
+
     echo mysqli_error($connection);
 
     return $result;
@@ -208,18 +209,18 @@ function getCategoriesByGameId($id)
     return $result;
 }
 
-function createGame(string $name, float $price, string $description, string $imageurl, int $isactive = 1)
+function createGame(int $gameID, string $name, float $price, string $description, string $imageurl, int $isactive = 1)
 {
     include "connection.php";
 
-    $query = "INSERT INTO games(name, price,description,imageurl,isactive) VALUES (?, ?, ?, ?, ?)";
+    $query = "INSERT INTO games(gameID,name, price,description,imageurl,isactive) VALUES (?,?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($connection, $query);
 
     if ($stmt === false) {
         die('Prepare failed: ' . htmlspecialchars(mysqli_error($connection)));
     }
 
-    mysqli_stmt_bind_param($stmt, 'sdssi', $name, $price, $description, $imageurl, $isactive);
+    mysqli_stmt_bind_param($stmt, 'isdssi', $gameID, $name, $price, $description, $imageurl, $isactive);
 
     $result = mysqli_stmt_execute($stmt);
 
@@ -230,6 +231,14 @@ function createGame(string $name, float $price, string $description, string $ima
     mysqli_stmt_close($stmt);
     mysqli_close($connection);
 
+    return $result;
+}
+function lastGameId()
+{
+    include 'connection.php';
+    $query = 'SELECT gameID FROM games ORDER BY gameID DESC LIMIT 1';
+    $result = mysqli_query($connection, $query);
+    mysqli_close($connection);
     return $result;
 }
 function updateGameById(int $id, string $name, float $price, string $description, string $imageurl, int $isactive = 1)
@@ -352,6 +361,14 @@ function getLikesListById(int $userid)
 {
     include "connection.php";
     $query = "SELECT*FROM likes l INNER JOIN games g on l.game_ID=g.gameID WHERE l.user_ID=$userid";
+    $result = mysqli_query($connection, $query);
+    return $result;
+}
+
+function deleteLikeById(int $userid, int $gameid)
+{
+    include "connection.php";
+    $query = "DELETE FROM likes WHERE game_ID = $gameid AND user_ID = $userid";
     $result = mysqli_query($connection, $query);
     return $result;
 }

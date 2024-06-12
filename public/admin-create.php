@@ -1,16 +1,29 @@
 <?php require './libs/functions.php' ?>
 <?php require './libs/vars.php' ?>
+<?php require './libs/connection.php'; ?>
 
 
 <?php
-
+$categories = getAllCategories();
+$lastId = lastGameId();
+$last = mysqli_fetch_assoc($lastId);
+$lastID = $last['gameID'];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $lastID++;
     $gamename = trim($_POST['name']);
     $gameprice = trim($_POST['price']);
+    $categoriess = $_POST['categoriess'];
     $gamedescription = trim(htmlspecialchars($_POST['description']));
     $gameimageurl = trim($_POST['imageurl']);
-    $gameadmincreate = createGame($gamename, $gameprice, $gamedescription, $gameimageurl);
+
+    $gameadmincreate = createGame($lastID, $gamename, $gameprice, $gamedescription, $gameimageurl);
+
     if ($gameadmincreate) {
+
+        if (count($categoriess) > 0) {
+            addGameToCategories($lastID, $categoriess);
+        }
+
         header('Location:admin-panel.php');
     } else {
         echo "Ekleme İşlemi Başarısız Oldu";
@@ -60,6 +73,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <input type="text" name="price" id="price" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900">
                                         </div>
                                     </div>
+                                </div>
+                                <div class="block sm:col-span-2 " style="overflow:scroll; height: 100px; overflow-x:hidden">
+                                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kategorileri Ekle</label>
+                                    <?php foreach ($categories as $c) : ?>
+                                        <div class="flex gap-2">
+                                            <label for="category_<?php echo $c['categoryID'] ?>"><?php echo $c["categoryname"] ?></label><br>
+                                            <input type="checkbox" id="category_<?php echo $c['categoryID'] ?>" name="categoriess[]" value="<?php echo $c['categoryID'] ?>">
+                                        </div>
+                                    <?php endforeach; ?>
+
+
                                 </div>
                                 <div class="sm:col-span-4">
                                     <label for="description" class="block text-md font-medium  leading-6 text-gray-900">Oyun Açıklaması</label>

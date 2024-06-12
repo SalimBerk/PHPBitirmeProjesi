@@ -1,4 +1,4 @@
-<footer class="w-full  max-h-screen border border-t border-b-0  border-black   bg-white">
+<footer class="w-full  max-h-screen border border-t border-b-0  border-black p-5 md:p-0   bg-white">
     <div class="container flex justify-between items-center h-44 ">
         <div class="flex justify-center  space-x-4">
             <ul class="flex gap-4">
@@ -16,7 +16,7 @@
                 </a>
             </ul>
         </div>
-        <div class="flex justify-center   space-x-4">
+        <div class="flex justify-center space-x-4 ">
             <span class="font-bold text-md lg:text-2xl text-black">Bizi Takip Edin</span>
         </div>
         <div class="flex justify-center  space-x-4">

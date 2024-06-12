@@ -21,17 +21,10 @@ if (isset($_GET['name'])) {
 <header class="bg-white border-4 border-solid text-black py-12 w-full  ">
     <div class="container flex items-center justify-between space-x-8 lg:space-x-16">
         <a href="/PHPBitirmeProjesi/public/" class=" pl-4 md:pl-0 sm:ml-2 text-2xl lg:text-xl font-bold text-black whitespace-nowrap relative">Oyun Günlüğ<i class="fa-solid fa-gamepad "></i><span class="absolute top-[-21px] right-[8px]">..</span></a>
-        <div class="block md:hidden">
-            <div class="space-y-1 cursor-pointer">
-                <div class="w-8 h-1 rounded-full"></div>
-                <div class="w-8 h-1 rounded-full"></div>
-                <div class="w-8 h-1 rounded-full"></div>
-                <div class="w-8 h-1 rounded-full"></div>
-            </div>
-        </div>
+
         <nav class="hidden md:flex justify-between flex-1 ">
             <div class="flex items-center lg:text-lg font-bold space-x-4 lg:space-x-8">
-                <a href="#" class="text-black whitespace-nowrap">Anasayfa</a>
+                <a href="#" class="text-black whitespace-nowrap">Anasayfa </a>
                 <a href="#" class="text-black whitespace-nowrap">Yeni Oyunlar</a>
                 <a href="#" class="text-black whitespace-nowrap">Hakkımızda</a>
 
@@ -85,7 +78,45 @@ if (isset($_GET['name'])) {
             <span class="last-item font-bold"></span>
 
         </div>
-        <button><i class="fa fa-bars fa-2x pr-4  visible md:invisible"></i></button>
+        <button onclick="miniMenu()"><i class="fa fa-bars fa-2x pr-4  visible md:invisible"></i></button>
     </div>
+    <div id="minMenu" class="hidden text-center md:hidden p-3 mt-10 ">
+        <ul class="space-y-8 cursor-pointer  ">
+            <li class="border-2 w-full h-full rounded-full p-4 bg-black text-white text-xl hover:bg-white hover:text-black hover:border-4 hover:border-black ">Anasayfa <i class="fa-solid fa-house ml-2"></i></li>
+            <li class="border-2 w-full h-full rounded-full p-4 bg-black text-white text-xl hover:bg-white hover:text-black hover:border-4 hover:border-black  ">Yeni Oyunlar<i class="fa-solid fa-gamepad ml-2"></i></li>
+            <li class="border-2 w-full h-full rounded-full p-4 bg-black text-white text-xl hover:bg-white hover:text-black hover:border-4 hover:border-black ">Hakkımızda<i class="fa-regular fa-address-card ml-2"></i></li>
+        </ul>
+    </div>
+
+    <script>
+        isClicked = false;
+        var menuprocess = document.getElementById('minMenu');
+
+        var isClicked = true;
+
+
+
+        function miniMenu() {
+
+
+
+            if (isClicked) {
+                menuprocess.classList.remove('hidden');
+                menuprocess.classList.add('block');
+                isClicked = false
+
+
+            } else {
+                menuprocess.classList.remove('block');
+                menuprocess.classList.add('hidden');
+                isClicked = true;
+
+            }
+
+
+
+
+        }
+    </script>
 
 </header>

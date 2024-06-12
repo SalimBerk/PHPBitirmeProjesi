@@ -18,24 +18,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gameprice = trim($_POST['price']);
     $gamedescription = trim(htmlspecialchars($_POST['description']));
     $gameimageurl = trim($_POST['imageurl']);
-    $categories = $_POST["categories"];
+    $categoriess = $_POST["categoriess"];
     $gameisactive = isset($_POST['isactive']) ? 1 : 0;
 
-    $gameadminupdate = updateGameById($id, $gamename, $gameprice, $gamedescription, $gameimageurl, $gameisactive);
-    if ($gameadminupdate) {
 
-        if (count($categories) > 0) {
-            addGameToCategories($id, $categories);
-        } else {
-            clearGameCategories($id);
+    if (updateGameById($id, $gamename, $gameprice, $gamedescription, $gameimageurl, $gameisactive)) {
+        clearGameCategories($id);
+        if (count($categoriess) > 0) {
+            addGameToCategories($id, $categoriess);
         }
-
         header('Location:admin-panel.php');
     } else {
+
         echo "Güncelleme İşlemi Başarısız Oldu";
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -84,24 +81,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     </div>
                                 </div>
                                 <div class="block sm:col-span-2 " style="overflow:scroll; height: 100px; overflow-x:hidden">
-                                    <label for="categories" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kategorileri Güncelle</label>
+                                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kategorileri Güncelle</label>
                                     <?php foreach ($categories as $c) : ?>
                                         <div class="flex gap-2">
                                             <label for="category_<?php echo $c['categoryID'] ?>"><?php echo $c["categoryname"] ?></label><br>
-                                            <input type="checkbox" id="category_<?php echo $c['categoryID'] ?>" name="categories[]" value="<?php echo $c['categoryID'] ?>" <?php
-                                                                                                                                                                            $isChecked = false;
-
-                                                                                                                                                                            foreach ($selectedcategoriesbygameid as $s) {
-                                                                                                                                                                                if ($s["categoryID"] == $c["categoryID"]) {
-                                                                                                                                                                                    $isChecked = true;
-                                                                                                                                                                                }
-                                                                                                                                                                            }
-
-                                                                                                                                                                            if ($isChecked) {
-                                                                                                                                                                                echo "checked";
-                                                                                                                                                                            }
-
-                                                                                                                                                                            ?>>
+                                            <input type="checkbox" id="category_<?php echo $c['categoryID'] ?>" name="categoriess[]" value="<?php echo $c['categoryID'] ?>">
                                         </div>
                                     <?php endforeach; ?>
 
