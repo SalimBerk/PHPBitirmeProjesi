@@ -95,6 +95,7 @@ Gamesiteapp adında veritabanı oluşturuldu. Bu veritabanında 5 adet tablo bul
 	<li>games</li>
   <li>gamescategory</li>
 	<li>users</li>
+ <li>likes</li>
 
 </ul>
 
